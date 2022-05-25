@@ -23,6 +23,16 @@ namespace Business.Concrete
             return _productDal.GetAll();
         }
 
+        public List<Product> GetProductsByCategoryId(int categoryId)
+        {
+            return _productDal.GetAll(c=>c.CategoryId==categoryId);
+        }
+
+        public List<Product> GetProductsByName(string productName)
+        {
+            return _productDal.GetAll(p=>p.ProductName.ToLower().Contains(productName.ToLower()));
+        }
+
         public Product Get(int productId)
         {
             return _productDal.Get(p=>p.ProductId==productId);
