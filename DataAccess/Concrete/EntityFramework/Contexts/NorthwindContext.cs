@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-4HHFM4J\DEVELOPER;Initial Catalog=Northwind;Integrated Security=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\ProjectModels;Initial Catalog=Northwind;Integrated Security=True;");
         }
 
 

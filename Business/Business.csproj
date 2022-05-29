@@ -11,4 +11,9 @@
     <ProjectReference Include="..\Entities\Entities.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.0.2" />
+    <PackageReference Include="Ninject" Version="3.3.6" />
+  </ItemGroup>
+
 </Project>

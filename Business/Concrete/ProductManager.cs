@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Universal.CrossCuttingConcerns.Validation;
 
 namespace Business.Concrete
 {
@@ -40,6 +42,7 @@ namespace Business.Concrete
 
         public void Add(Product product)
         {
+            ValidationTool.Validate(new ProductValidator(),product);
             _productDal.Add(product);
         }
 
